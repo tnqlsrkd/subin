@@ -1,0 +1,168 @@
+# subin
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>이력서</title>
+        <style>
+          /* 스타일 지정 */
+          #photo {
+            background-color: #FFE4E1;
+          }
+      
+          #education {
+            background-color: #FFFACD;
+          }
+      
+          #qualification {
+            background-color: #F0FFF0;
+          }
+      
+          #award {
+            background-color: #E6E6FA;
+          }
+      
+          .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+          }
+      
+          .menu li {
+            display: inline;
+            margin-right: 10px;
+          }
+      
+          .menu li a {
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+          }
+        </style>
+      </head>
+<head>
+    <title>Multimedia</title>
+</head>
+<body>
+    <audio controls="controls">
+        <source src="Kalimba.mp3" type="audio/mp3">
+        <source src="Kalimba.ogg" type="audio/ogg">
+    </audio>
+    <video width="320" controls="controls">
+        <source src="Wildlife.mp4" type="video/mp4">
+        <source src="Wildlife.webm" type="video/webm">
+    </video>
+
+    <nav>
+        <ul>
+            <li><a href="#">신상</a></li>
+            <li><a href="#">학력</a></li>
+            <li><a href="#">자격</a></li>
+            <li><a href="#">경험</a></li>
+        </ul>
+    </nav>
+
+    <h1>이력서</h1>
+
+
+    <table border="1">
+        <tr>
+            <th rowspan="4"><pre>     사진    </pre></th>
+            <td><pre>   이름   </pre></td>
+            <td>  최수빈  </td>
+            <td> 생년월일 </td>
+            <td>  2004.04.30  </td>
+        </tr>
+        <tr>
+            <td><pre>  연락처  </pre></td>
+            <td>    010-9031-0438    </td>
+            <td> 나이 </td>
+            <td>    20살   </td>
+        </tr>
+        <tr>
+            <td><pre>  E-mail  </pre></td>
+            <td colspan="3"> kkuunn4116@naver.com </td>
+        </tr>
+        <tr>
+            <td><pre>  집주소  </pre></td>
+            <td colspan="3">경기도 안산시 사동 영화 3길 4</td>
+        </tr>
+    </table><br/>
+    <table border="1">
+        <tr>
+            <th rowspan="5"> 학력사항 </th>
+            <td> 기 간 </td>
+            <td> 출 신 학 교 </td>
+            <td> 전 공 </td>
+            <td> 학 점 </td>
+            <td> 졸업여부 </td>
+        </tr>
+        <tr>
+            <td> 2023.3~ </td>
+            <td> 한양여자대학교 </td>
+            <td> 빅데이터과 </td>
+            <td> 아직 X </td>
+            <td> 재학 </td>
+        </tr>
+        <tr>
+            <td> 2020.3~2022.12 </td>
+            <td> 안산디자인문화고등학교 </td>
+            <td> 미디어콘텐츠과 </td>
+            <td> 3.77 </td>
+            <td> 졸업 </td>
+        </tr>
+        <tr>
+            <td> 2017.3~2020.1 </td>
+            <td> 시곡중학교 </td>
+            <td> X </td>
+            <td> 164점 </td>
+            <td> 졸업 </td>
+        </tr>
+    </table><br/>
+    <table border="1">
+        <tr>
+            <th rowspan="4"> 자격면허 </th>
+            <td> 자격증(면허) 명 </td>
+            <td> 등급 </td>
+            <td> 취득년월일 </td>
+            <td> 발행기관 </td>
+        </tr>
+        <tr>
+            <td> 파워포인트 </td>
+            <td> c등급 </td>
+            <td> 2021. 11 </td>
+            <td> 한국생산성본부 </td>
+        </tr>
+    </table><br/>
+    <table border="1">
+        <tr>
+            <th rowspan="3"> 경험사항 </th>
+            <td> 기관명 </td>
+            <td> 기간 </td>
+            <td> 업무내용 </td>
+        </tr>
+        <tr>
+            <td> 아직 </td>
+            <td> 알바나 취직 경험이 없어 </td>
+            <td> 비워두겠습니다! </td>
+        </tr>
+    </table><br/>
+    <div id="membership">
+
+        <h2 id="membership-heading">멤버쉽</h2>
+        
+        <form>
+        
+        <label for="membership-type">멤버쉽 유형:</label><br>
+        
+        <input type="text" id="membership-type" name="membership-type" onmouseover="changeInputBackground(this)" onmouseout="changeInputBackground(this)" required><br><br>
+        
+        <input type="submit" value="제출">
+        
+        </form>
+        
+        </div>
+
+</body>
+</html>
+<footer>2302603 최수빈</footer>
