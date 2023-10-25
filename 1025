@@ -46,3 +46,12 @@ fruits.shift();
 console.log(fruits);
 
 // note!! shift, unshift are slower then pop, push
+
+//combine two arrays
+const fruits2 = ['🍐', '🍈']
+
+//5.searcing
+//indexOf: find the index
+console.clear();
+console.log(fruits);
+console.log(fruits);
