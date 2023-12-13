@@ -1,0 +1,144 @@
+1
+<!DOCTYPE html>
+<html>
+<head>
+    <title>이미지 슬라이더</title>
+    <script src="Jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(funtion (){}
+            //변수를 선언합니다.
+            const width =460;
+            const height =300;
+            const current =0;
+            //함수를 선언합니다.
+            const moveTo =function () {
+                $('.images').animate({
+                    left: -current *width
+                }, 1000);
+            };
+            //슬라이더 내부의 이미지 개수를 확인합니다.
+            const immageLength = $('.slider').find('.image').length;
+            //슬라이더 버튼을 추가합니다.
+            for (let i = 0; i < imageLength; i++){
+                $('<button></button')
+                    .attr('data-positon', i)
+                    .text(i)
+                    .Click(function () {
+                        current = $(this).attr('data-positon');
+                        moveTo();
+                    })
+                    .insertBefore('.slider');
+            }
+            //슬라이더 스타일을 설정합니다.
+            $('.slider').css({
+                position: 'relative',
+                width: width,
+                height: height,
+                overflow: 'hidden'
+            });  
+    </script>
+</head>
+<body>
+    <div class="slider">
+        <div class="images">
+            <img class="image" src="https://via.placeholder.com/460x300?text=image_0" />
+            <img class="image" src="https://via.placeholder.com/460x300?text=image_1" />
+            <img class="image" src="https://via.placeholder.com/460x300?text=image_2" />
+            <img class="image" src="https://via.placeholder.com/460x300?text=image_3" />
+            <div class="image">
+                <h1>이미지가 아닌 것</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+2
+<!DOCTYPE html>
+<html>
+<head>
+    <title>이미지 슬라이더</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready (function () {
+            $('.slider').imageSlider({
+                width: 460,
+                height: 300
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="slider">
+        <div class="images">
+            <img class="image" src= "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA1MDVfMjI2%2FMDAxNjUxNzQ3MzU4NDU1.1038XZ98BKTAl805VsmwUyQrCeGBL_rAn1aeijtAL1Ug.aqvf8zV_h1orYOkVbcwPc0MZERiYDeLcxQSSnY2mWdsg.JPEG.chaeryung0630%2FIMG_6801.JPG&type=sc960_832" />
+            <img class="image" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA5MjJfMTQ5%2FMDAxNjk1MzM4ODc3MDQ5.xpSBJFsEKa-FcKcAZ-_NFiz11YlZmeg-v11T7Rf2aiMg.y1reM_YqSBtqqjf209Rh6JHGGTDGfncqhRH-24N0FmYg.PNG.didcjddns%2FErai-raws_Jujutsu_Kaisen_2nd_Season_-_09_1080pMultiple_SubtitleDBDA4C8C.mkv_.png&type=sc960_832" />
+            <img class="image" src= "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MjJfMTUy%2FMDAxNjg0NzQ5NzI5NTYz.1jwH2_O2TE4ptyfWYYI2z6JdBmrTepq4mrRxsQpFjtsg.YJE2mf3e8BjHroLQD1h6PKbVGHfpXjHM3t7YzeBrzWcg.JPEG.jjminji0719%2Foutput_3297739215.jpg&type=sc960_832" />
+            <img class="image" src= "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA5MjFfMTM2%2FMDAxNjk1Mjg3ODI3MDUw.eanQYM_fR6wlr54Mf3vn3b1EqqrsA2KEC_zALqm5kxog.sQpDYgtoQsx0BBv1S_ksEBD-80qg1hsAYfPsS8PGxQog.JPEG.young040627%2F%25B0%25ED%25C1%25D2_%25B9%25DD%25B0%25A5%25C1%25D72.jpg&type=sc960_832" />
+            <div class="image">
+                <h1>이미지가 아닌 것</hl>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+3
+<!DOCTYPE html> 
+<html> 
+<head> 
+// 플러그인 등록합니다.
+$.fn.imageSlider = function (object) {
+    // 변수를 선언합니다.
+    const width = object.width || 460;
+    const height = object.width || 300;
+    const current = 0;
+    // 함수를 선언합니다.
+    const moveTo = function () {
+        $(this).find('.images').animate({
+            left: -current * width
+        }, 1000);
+    };
+    // 슬라이더 내부의 이미지 개수를 확인합니다.
+    const imageLength = $(this).find('.image').length;
+    // 슬라이더 버튼을 추가합니다.
+    for (let i = 0; i < imageLength; i++) {
+        $('<button></button>')
+            .attr('data-position',i)
+            .text(i)
+            .click(function () {
+                current = $(this).attr('data-position');
+                moveTo();
+            })
+            .insertBefore(this);
+    }
+    // 슬라이더 스타일을 설정합니다.
+    $(this).css({
+        position: 'relative',
+        width: width,
+        height: height,
+        overflow: 'hidden'
+    });
+    $(this).find('.images').css({
+        position: 'absolute',
+        width: width * imageLength,
+    });
+    $(this).find('.image').css({
+        margin: 0,
+        padding: 0,
+        width: width,
+        height: height,
+        display: 'block',
+        float: 'left'
+    });
+    // 3초마다 슬라이더를 이동시킵니다.
+    setInterval(function () {
+        current = current + 1;
+        current = current % imageLength;
+        moveTo();
+    }, 3000);
+};
+</head>
+</html>
